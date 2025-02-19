@@ -20,5 +20,21 @@
     "build": "parcel build public/index.html",
     "new-component": "new-component"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "description": "In this project, we'll recreate a popular online word game, Wordle:",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisa-chen-58/project-wordle.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lisa-chen-58/project-wordle/issues"
+  },
+  "homepage": "https://github.com/lisa-chen-58/project-wordle#readme"
 }
