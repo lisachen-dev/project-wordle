@@ -1,0 +1,18 @@
+import React from 'react';
+
+function Results({results}) {
+  return (
+  <>
+    <h1>Current Guesses</h1>
+    <div className="guess-results">
+        <p>is it getting here?</p>
+        {results.map((result, index) => (
+            <p key={index} className="guess">
+                {result}
+            </p>
+        ))}
+    </div>
+  </>);
+}
+
+export default Results;
