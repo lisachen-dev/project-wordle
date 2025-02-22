@@ -17,6 +17,7 @@ function Submission({handleAddResult}) {
         <form onSubmit={handleSubmit} className="guess-input-wrapper">
           <label htmlFor="guess-input">Enter guess:</label>
           <input
+            required
             id="guess-input"
             type="text"
             value={guess}

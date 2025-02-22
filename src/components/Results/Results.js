@@ -7,8 +7,8 @@ function Results({results}) {
     <div className="guess-results">
         <p>is it getting here?</p>
         {results.map(
-            (result, index) => (
-                <p key={index}>{result} and {index}</p>
+            (result) => (
+                <p key={result.id}>{result.val}</p>
             )
         )}
     </div>
