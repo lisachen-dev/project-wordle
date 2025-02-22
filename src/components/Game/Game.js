@@ -15,13 +15,9 @@ console.info({ answer });
 function Game() {
   const [results, setResults] = React.useState([]);
 
-  function handleAddResult(label){
-    const resultObj = {
-        id: crypto.randomUUID(),
-        label
-    }
-
-    setResults(prevResults => [...results, resultObj]);  }
+  function handleAddResult(guess){
+    setResults([...results, guess]);
+  }
 
   return (
       <>

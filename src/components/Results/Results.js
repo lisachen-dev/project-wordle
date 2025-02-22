@@ -6,11 +6,11 @@ function Results({results}) {
     <h1>Current Guesses</h1>
     <div className="guess-results">
         <p>is it getting here?</p>
-        {results.map((result, index) => (
-            <p key={index} className="guess">
-                {result}
-            </p>
-        ))}
+        {results.map(
+            (result, index) => (
+                <p key={index}>{result} and {index}</p>
+            )
+        )}
     </div>
   </>);
 }
