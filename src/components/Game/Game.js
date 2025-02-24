@@ -13,16 +13,16 @@ const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
-  const [results, setResults] = React.useState([]);
+  const [gameResults, setGameResults] = React.useState([]);
 
   function handleAddResult(guess){
-    setResults([...results, { id: crypto.randomUUID(), val: guess }]);
+    setGameResults([...gameResults, { id: crypto.randomUUID(), val: guess }]);
   }
 
   return (
       <>
+        <Results gameResults={gameResults}/>
         <Submission handleAddResult={handleAddResult}/>
-        <Results results={results}/>
       </>
   )
 }

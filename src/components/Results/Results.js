@@ -1,14 +1,13 @@
 import React from 'react';
 
-function Results({results}) {
+function Results({gameResults}) {
   return (
   <>
     <h1>Current Guesses</h1>
     <div className="guess-results">
-        <p>is it getting here?</p>
-        {results.map(
+        {gameResults.map(
             (result) => (
-                <p key={result.id}>{result.val}</p>
+                <p className="guess" key={result.id}>{result.val}</p>
             )
         )}
     </div>
