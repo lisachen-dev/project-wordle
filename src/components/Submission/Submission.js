@@ -12,28 +12,25 @@ function Submission({handleAddResult}) {
   }
 
   return (
-    <>
-        <p>{guess}</p>
-        <form onSubmit={handleSubmit} className="guess-input-wrapper">
-          <label htmlFor="guess-input">Enter guess:</label>
-          <input
-            required
-            id="guess-input"
-            type="text"
-            value={guess}
-            minLength={5}
-            maxLength={5}
-            pattern="[a-zA-Z]{5}"
-            title="Enter a 5 letter word"
-            onChange={
-                event=>{
-                    const upperWord = event.target.value.toUpperCase();
-                    setGuess(upperWord);
-            }}
-          />
-          <button type="submit">Submit</button>
-        </form>
-    </>
+    <form onSubmit={handleSubmit} className="guess-input-wrapper">
+      <label htmlFor="guess-input">Enter guess:</label>
+      <input
+        required
+        id="guess-input"
+        type="text"
+        value={guess}
+        minLength={5}
+        maxLength={5}
+        pattern="[a-zA-Z]{5}"
+        title="Enter a 5 letter word"
+        onChange={
+            event=>{
+                const upperWord = event.target.value.toUpperCase();
+                setGuess(upperWord);
+        }}
+      />
+      <button type="submit">Submit</button>
+    </form>
   );
 }
 
