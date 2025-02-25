@@ -3,8 +3,8 @@ import React from 'react';
 import { sample } from '../../utils';
 import { WORDS } from '../../data';
 
-import Submission from '../Submission/';
 import Results from '../Results/';
+import Submission from '../Submission/';
 
 
 // Pick a random word on every pageload.
