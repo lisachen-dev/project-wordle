@@ -1,12 +1,17 @@
 import React from 'react';
+import { range } from '../../utils.js';
 
-function GuessRow({ word }) {
+function GuessRow({ word="" }) {
     const letterArray = word.split("");
 
     return (
         <p className="guess">
-            {letterArray.map(
-                (letter, index) => <span className="cell" key={index}>{letter}</span>
+            {range(5).map(
+                (num)=>(
+                    <span key={num} className="cell">
+                        {letterArray[num]}
+                    </span>
+                )
             )}
         </p>
     )

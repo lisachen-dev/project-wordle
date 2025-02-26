@@ -1,12 +1,20 @@
 import React from 'react';
 import GuessRow from '../GuessRow';
+import { NUM_OF_GUESSES_ALLOWED } from '../../constants.js';
+import { range } from '../../utils.js';
 
 function GuessResults({ resultList }) {
+
     return (
         <div className="guess-results">
-            {resultList.map((result)=>(
-                <GuessRow word={result.word} key={result.id} />
-            ))}
+            {range(NUM_OF_GUESSES_ALLOWED).map(
+                (num)=>(
+                    <GuessRow
+                        key={num}
+                        word={resultList[num]?.word || ''}
+                    />
+                )
+            )}
         </div>
 )}
 
