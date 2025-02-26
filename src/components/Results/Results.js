@@ -11,8 +11,8 @@ function Results({gameResults}) {
       <>
         <h1>Current Guesses</h1>
         <div className="guess-results">
-            {range(NUM_OF_GUESSES_ALLOWED).map((index) => (
-               <Guess key={index} result={gameResults[index] || { id: index, val: "" }} />
+            {range(NUM_OF_GUESSES_ALLOWED).map((guessSlot) => (
+               <Guess key={guessSlot} result={gameResults[guessSlot] || { id: guessSlot, val: "" }} />
              ))}
         </div>
       </>

@@ -7,9 +7,9 @@ function Guess({ key, result }) {
 
         return (
             <div className="guess" key={id}>
-                {range(5).map((index) => (
-                    <span className="cell" key={index}>
-                        {letters[index] || ""}
+                {range(5).map((letterSlot) => (
+                    <span className="cell" key={letterSlot}>
+                        {letters[letterSlot] || ""}
                     </span>
                 ))}
             </div>
